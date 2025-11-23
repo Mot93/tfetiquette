@@ -1,0 +1,6 @@
+# Ignore terraform generated configurations files
+.terraform
+# terraform plan output file
+plan.tfout
+# Local terraform state
+*tfstate*
