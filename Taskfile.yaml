@@ -1,0 +1,20 @@
+version: '3'
+
+includes:
+  env0:
+    taskfile: ./tasks.yaml
+    dir: ./env0/
+  env1:
+    taskfile: ./tasks.yaml
+    dir: ./env1/
+
+tasks:
+
+  default:
+    silent: true
+    cmd: task --list
+
+  fmt: 
+    desc: Format repo files
+    silent: true
+    cmd: terraform fmt -recursive ./
