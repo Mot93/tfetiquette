@@ -5,7 +5,7 @@ resource "null_resource" "base_resource" {
     id       = each.key
     name     = each.value.name
     flag     = each.value.flag
-    env      = var.env
+    env      = local.env
     location = local.location
   }
 }

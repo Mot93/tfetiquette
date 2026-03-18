@@ -1,7 +1,14 @@
-variable "env" {
-  description = "Environment type"
-  type        = string
-}
+# There is no need to define this variable because it's inherited from the terraform state of the env0
+# variable "env" {
+#   description = "Environment type"
+#   type        = string
+# }
+
+# There is no need to define this variable because it's inherited from the terraform state of the env0
+# variable "location" {
+#   description = "Location of the environment"
+#   type        = string
+# }
 
 variable "resources_list" {
   description = "List of resources to create"
@@ -24,7 +31,7 @@ variable "feature2_enabled" {
 }
 
 variable "feature2_list" {
-  description = "List of items to create in "
+  description = "List of items to create in feature 2"
   type = map(object({
     name = string
   }))
