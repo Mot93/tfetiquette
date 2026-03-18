@@ -4,7 +4,7 @@
 plan.tfout
 # Local terraform state
 *tfstate*
-# Ignore any tfvars files since they should only be used for sensitive data
+# Ignore any *.auto.tfvars files since they should only be used for sensitive data
 # All files *.auto.tfvars will be read authomatically withouth the use of -var-file
-# In this repo tfvars are still tracked only to offer an example
-# *.tfvars
+# In this repo *.auto.tfvars are still tracked only to offer an example
+# *.auto.tfvars
