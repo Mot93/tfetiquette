@@ -1,6 +1,6 @@
 output "location" {
   description = "Location of the resources"
-  value       = "Europe"
+  value       = local.location
 }
 
 output "environment" {
