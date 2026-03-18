@@ -5,7 +5,7 @@ resource "null_resource" "feature2_resource" {
     id              = each.key
     base_feature_id = each.value.base_feature_id
     name            = each.value.name
-    env             = local.env
+    env             = var.env
     location        = local.location
   }
 }

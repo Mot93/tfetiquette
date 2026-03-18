@@ -1,8 +1,8 @@
-# There is no need to define this variable because it's inherited from the terraform state of the env0
-# variable "env" {
-#   description = "Environment type"
-#   type        = string
-# }
+# Inherited from a file used by boths environments 0 and environment 1
+variable "env" {
+  description = "Environment type"
+  type        = string
+}
 
 # There is no need to define this variable because it's inherited from the terraform state of the env0
 # variable "location" {

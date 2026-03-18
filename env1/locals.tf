@@ -1,5 +1,4 @@
 locals {
-  env      = data.terraform_remote_state.env0.outputs.environment
   location = data.terraform_remote_state.env0.outputs.location
   # TODO: create a list that uses flat() function when using double loops
   #feature1_list = { for k,v in var.resources_list : }
