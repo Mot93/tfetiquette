@@ -10,6 +10,8 @@ variable "env" {
 #   type        = string
 # }
 
+# Module like variables
+
 variable "resources_list" {
   description = "List of resources to create"
   type = map(object({
@@ -36,4 +38,11 @@ variable "feature2_list" {
     name = string
   }))
   default = {}
+}
+
+# Sensitive variables
+
+variable "password" {
+  description = "Pasord, must be kept secret"
+  type        = string
 }

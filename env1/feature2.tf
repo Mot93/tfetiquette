@@ -6,6 +6,8 @@ resource "null_resource" "feature2_resource" {
     base_feature_id = each.value.base_feature_id
     name            = each.value.name
     env             = var.env
+    password        = var.password
     location        = local.location
+    link            = local.link
   }
 }

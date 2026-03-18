@@ -1,3 +1,8 @@
+# Variables should be used for sensistive data and modules
+# *.auto.tfvars will be read auromatically by terraform withouth having to specify it via 
+
+# Module like variables
+
 resources_list = {
   first = {
     name = "Mike"
@@ -13,3 +18,7 @@ resources_list = {
 
 feature1_enabled = false
 feature2_enabled = true
+
+# Sensitive informations
+
+password = "123abc"
