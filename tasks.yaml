@@ -4,7 +4,7 @@ tasks:
 
   init:
     desc: Initialize terraform
-    cmd: terraform init
+    cmd: terraform init -upgrade
 
   plan: 
     desc: Plan terraform actions
