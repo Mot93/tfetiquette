@@ -15,6 +15,11 @@ I found them particularly usefull when working with other peoples because it's a
 
 It's particularly usefull to have always the have predictable outputs, this works particularly well with `.gitignore`.
 
-## Explanation
+## Shared variables
 
-TODO:
+There 2 main ways to schare a value bween environments.
+
+1. Having a file that they both can access.
+    This is gread when sharing basic and public configurations.
+2. Reading another terraform state to make sure that all are alligned.
+    Particularly usefull when sharing the outputs of one or more resources between environments.
