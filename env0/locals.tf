@@ -5,7 +5,7 @@ locals {
   location = "Europe"
   # Group same scope variables inside objects
   resource_0 = {
-    id = "Zero"
+    id   = "Zero"
     name = "Chronos"
   }
 }
