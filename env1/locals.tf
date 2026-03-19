@@ -39,6 +39,17 @@ locals {
 # Resources 2 are created only if var.resources_list.flag == true
 
 locals {
+  random_config = {
+    # Try to keep the lenght of the password as long as possible
+    length  = 16
+    lower   = true
+    numeric = true
+    special = true
+    upper   = true
+    # Supplying your own list of special is always better
+    # Always check what is supported and what is interpreted
+    override_special = "{}£"
+  }
   # Features 2 list is created always regardles
   feature2_list = {
     for key, value in var.resources_list : key => {

@@ -20,6 +20,14 @@ variable "resources_list" {
   }))
 }
 
+variable "resources_configs" {
+  description = ""
+  type = map(object({
+    option_1 = string
+    option_2 = string
+  }))
+}
+
 variable "feature1_enabled" {
   description = "Enable feature 1. Disable feature 2"
   type        = bool
