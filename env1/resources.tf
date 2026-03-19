@@ -1,3 +1,5 @@
+# Create a resource for each element in the provided list
+
 resource "null_resource" "base_resource" {
   for_each = var.resources_list
 

@@ -1,3 +1,7 @@
+output "feature1_list" {
+  value = local.feature1_list_enabled
+}
+
 # Output attributes of a resource created a number of times
 output "feature2_random" {
   value = {

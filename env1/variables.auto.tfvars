@@ -27,7 +27,7 @@ resources_configs = {
   }
 }
 
-feature1_enabled = false
+feature1_enabled = true
 feature2_enabled = true
 
 # Sensitive informations
