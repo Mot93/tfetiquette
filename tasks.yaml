@@ -12,8 +12,16 @@ tasks:
 
   plan: 
     desc: Plan terraform actions
-    summary: Plan terraform actions and store it into plan.tfout
-    cmd: terraform plan -out=plan.tfout -var-file=./../commons.tfvars
+    summary: |
+      Plan terraform actions and store it into plan.tfout
+      Alternatively it's possible to use target=<specific output> for a specific resource
+    vars:
+      target: '{{.target| default "null"}}'
+    cmds:
+      - cmd: terraform plan -out=plan.tfout -var-file=./../commons.tfvars
+        if: '{{eq .target "null"}}'
+      - cmd: terraform plan -target={{.target}} -out=plan.tfout -var-file=./../commons.tfvars
+        if: '{{ne .target "null"}}'
 
   apply:
     decs: Apply plan stored in plan.tfout
