@@ -5,6 +5,10 @@ tasks:
   init:
     desc: Initialize terraform
     cmd: terraform init -upgrade
+  
+  val:
+    desc: Validate terraform configurations
+    cmd: terraform validate
 
   plan: 
     desc: Plan terraform actions
@@ -14,3 +18,16 @@ tasks:
   apply:
     decs: Apply plan stored in plan.tfout
     cmd: terraform apply plan.tfout
+
+  output:
+    desc: Print terrafomr output
+    summary: |
+      Print all the terraform outputs
+      Alternatively it's possible to use target=<specific output> for a specific output
+    vars:
+      target: '{{.target| default "null"}}'
+    cmds:
+      - cmd: terraform output
+        if: '{{eq .target "null"}}'
+      - cmd: terraform output {{.target}}
+        if: '{{ne .target "null"}}'
